@@ -16,7 +16,7 @@ public class BottleOfWater extends Product {
         this.volume = volume;
     }
 
-        /**
+    /**
      * переопределение вывода продукта
      */
     @Override
