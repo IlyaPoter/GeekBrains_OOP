@@ -1,5 +1,6 @@
 import Products.Product;
 import Products.BottleOfWater;
+import Products.HotDrink;
 import VendingMachines.VendingMachine;
 
 public class App {
@@ -17,6 +18,10 @@ public class App {
         itemMachin.addProduct(new Product("Снек", 20.0));
         itemMachin.addProduct(new BottleOfWater("Cola", 88.0, 500));
         itemMachin.addProduct(new BottleOfWater("Water", 188.0, 1500));
+        itemMachin.addProduct(new HotDrink("Tea", 69, 95));
+        itemMachin.addProduct(new HotDrink("Tea", 59, 75));
+        itemMachin.addProduct(new HotDrink("coffee", 400, 100));
+
 
         for(Product prod: itemMachin.getProdAll())
         {
