@@ -19,7 +19,7 @@ public class App {
         iActorBehaviour item1 = new OrdinaryClient("Boris");
         iActorBehaviour item2 = new SpecialClient("Fedor", 1101);
         iActorBehaviour item3 = new OrdinaryClient("Dasha");
-        iActorBehaviour item4 = new PromoClient("Petr", 15);
+        iActorBehaviour item4 = new PromoClient("Petr", 25);
 
         market.acceptToMarket(item1);
         market.acceptToMarket(item2);
