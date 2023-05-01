@@ -1,15 +1,22 @@
 package Classes;
 
-public class OrdinaryClient extends Actor {
+public class SpecialClient extends Actor{
 
-    public OrdinaryClient(String name)
+    private int idVIP;
+
+    public SpecialClient(String name, int idVIP)
     {
         super(name);
+        this.idVIP = idVIP;
     }
-    
+
     @Override
     public String getName() {
         return super.name;
+    }
+    
+    public int getidVIP(){
+        return idVIP;
     }
 
     @Override

@@ -1,15 +1,22 @@
 package Classes;
 
-public class OrdinaryClient extends Actor {
+public class PromoClient extends Actor{
 
-    public OrdinaryClient(String name)
+    private int sale;
+
+    public PromoClient(String name, int sale)
     {
         super(name);
+        this.sale = sale;
     }
-    
+
     @Override
     public String getName() {
         return super.name;
+    }
+    
+    public int getidVIP(){
+        return sale;
     }
 
     @Override
