@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "GeekBrains_OOP",
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"java.debug.settings.onBuildFailureProceed": true
+	}
+}
