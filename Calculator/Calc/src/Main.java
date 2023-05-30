@@ -1,27 +1,39 @@
+/*
+Итоговое домашнее задание по курсу
+
+Создать проект калькулятора комплексных чисел (достаточно сделать сложение, умножение и
+деление). Применить при создании программы архитектурные паттерны, добавить
+логирование калькулятора. Соблюдать принципы SOLID, паттерны проектирования. Можно
+выбрать другой язык программирования, например C# или Python, если выбран язык,
+отличный от JAVA, то необходимо написать документ, каким образом можно запустить
+приложение (что необходимо установить, каким образом запускать и т.п.)
+ */
+
+
 import java.util.logging.*;
-// Пример использования калькулятора комплексных чисел
+// Использования калькулятора комплексных чисел
 public class Main {
     public static void main(String[] args) {
-        // Создаем комплексные числа
-        ComplexNumber num1 = new ComplexNumber(2, 3);
-        ComplexNumber num2 = new ComplexNumber(1, 2);
+        // Создание комплексных чисел
+        ComplexNumber number1 = new ComplexNumber(2, 3);
+        ComplexNumber numer2 = new ComplexNumber(1, 2);
 
-        // Создаем логгер и калькулятор с выбранной операцией
+        // Создание логирования и калькулятора с выбранной операцией
         Logger logger = new ConsoleLogger(Calculator.class);
         Calculator calculator = new Calculator(new Addition(), logger);
 
-        // Выполняем операцию сложения
-        ComplexNumber sum = calculator.calculate(num1, num2);
+        // Выполнение операции сложения
+        ComplexNumber sum = calculator.calculate(number1, numer2);
         System.out.println("Сложение: " + sum);
 
-        // Выполняем операцию умножения
+        // Выполнение операции умножения
         Calculator calculator2 = new Calculator(new Multiplication(), logger);
-        ComplexNumber product = calculator2.calculate(num1, num2);
+        ComplexNumber product = calculator2.calculate(number1, numer2);
         System.out.println("Умножение: " + product);
 
-        // Выполняем операцию деления
+        // Выполнение операции деления
         Calculator calculator3 = new Calculator(new Division(), logger);
-        ComplexNumber quotient = calculator3.calculate(num1, num2);
+        ComplexNumber quotient = calculator3.calculate(number1, numer2);
         System.out.println("Деление: " + quotient);
     }
 }
@@ -88,7 +100,7 @@ interface Logger {
     void log(String message);
 }
 
-// Конкретная реализация логирования с использованием java.util.logging.Logger
+// Логирование с помощью java.util.logging.Logger
 class ConsoleLogger implements Logger {
     private java.util.logging.Logger logger;
 
@@ -116,7 +128,7 @@ class Calculator {
         // Выполняем операцию над комплексными числами
         ComplexNumber result = operation.calculate(num1, num2);
         
-        // Логируем результат операции
+        // Логг результата операции
         logger.log("Calculation result: " + result);
         
         return result;
